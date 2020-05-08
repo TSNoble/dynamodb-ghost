@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest
+moto
+flake8
+pathlib
+zest-releaser

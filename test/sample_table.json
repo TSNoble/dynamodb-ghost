@@ -1,0 +1,98 @@
+{
+  "AttributeDefinitions":
+  [
+    {
+      "AttributeName": "key",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "local_index_key",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "global_index_key",
+      "AttributeType": "S"
+    }
+  ],
+  "TableName": "mock_table",
+  "KeySchema":
+  [
+    {
+      "AttributeName": "key",
+      "KeyType": "HASH"
+    },
+    {
+      "AttributeName": "local_index_key",
+      "KeyType": "RANGE"
+    }
+  ],
+  "LocalSecondaryIndexes":
+  [
+    {
+      "IndexName": "local_index",
+      "KeySchema":
+      [
+        {
+          "AttributeName": "key",
+          "KeyType": "HASH"
+        },
+        {
+          "AttributeName": "local_index_key",
+          "KeyType": "RANGE"
+        }
+      ],
+      "Projection":
+      {
+        "ProjectionType": "INCLUDE",
+        "NonKeyAttributes": ["index_value"]
+      }
+    }
+  ],
+  "GlobalSecondaryIndexes":
+  [
+    {
+      "IndexName": "global_index",
+      "KeySchema":
+      [
+        {
+          "AttributeName": "global_index_key",
+          "KeyType": "HASH"
+        }
+      ],
+      "Projection":
+      {
+        "ProjectionType": "INCLUDE",
+        "NonKeyAttributes": ["index_value"]
+      },
+      "ProvisionedThroughput":
+      {
+        "ReadCapacityUnits": 5,
+        "WriteCapacityUnits": 5
+      }
+    }
+  ],
+  "BillingMode": "PROVISIONED",
+  "ProvisionedThroughput":
+  {
+    "ReadCapacityUnits": 5,
+    "WriteCapacityUnits": 5
+  },
+  "StreamSpecification":
+  {
+    "StreamEnabled": true,
+    "StreamViewType": "NEW_IMAGE"
+  },
+  "SSESpecification":
+  {
+    "Enabled": true,
+    "SSEType": "KMS",
+    "KMSMasterKeyId": "arn:aws:kms:eu-west-1:017125557732:key/466f6552-d7de-4078-91d4-043919e91d95"
+  },
+  "Tags":
+  [
+    {
+      "Key": "tag_key_1",
+      "Value": "tag_value_1"
+    }
+  ]
+}
