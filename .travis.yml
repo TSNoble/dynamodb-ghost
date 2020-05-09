@@ -5,6 +5,6 @@ env:
 install:
   - pip install -r requirements-dev.txt
 script:
-  - pytest --cov=source test
+  - python -m pytest --cov=source test
 after_success:
   - codecov
