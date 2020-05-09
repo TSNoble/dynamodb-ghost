@@ -1,7 +1,11 @@
+sudo: false
 language: python
+cache: pip
 env:
   - AWS_DEFAULT_REGION=eu-west-1
 install:
   - pip install -r requirements-dev.txt
 script:
-  - python -m pytest test
+  - python -m pytest --cov=source test
+after_success:
+  - codecov
