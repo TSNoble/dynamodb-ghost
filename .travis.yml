@@ -1,0 +1,7 @@
+language: python
+env:
+  - AWS_DEFAULT_REGION=eu-west-1
+install:
+  - pip install -r requirements-dev.txt
+script:
+  - python -m pytest test
