@@ -1,6 +1,6 @@
 -r requirements.txt
-pytest==5.4.1
-moto==1.3.14
-flake8==3.7.9
+pytest
+moto
+flake8
 pathlib
 zest-releaser
