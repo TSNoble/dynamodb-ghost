@@ -1,7 +1,7 @@
 import pytest
 
 
-from source.utils import sse_specification_from_description, throughput_from_description,\
+from dynamodb_ghost.utils import sse_specification_from_description, throughput_from_description,\
     billing_mode_from_summary, global_index_from_description, local_index_from_description, \
     subdict
 

@@ -5,8 +5,8 @@ import boto3
 import moto
 import pytest
 
-from source.dynamodb_ghost import ghost
-from source.utils import subdict
+from dynamodb_ghost import ghost
+from dynamodb_ghost.utils import subdict
 
 
 @pytest.fixture

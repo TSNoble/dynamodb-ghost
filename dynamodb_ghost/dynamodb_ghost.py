@@ -1,6 +1,6 @@
 from contextlib import contextmanager
 
-from source.utils import table_specification_from_description
+from dynamodb_ghost.utils import table_specification_from_description
 
 
 @contextmanager
