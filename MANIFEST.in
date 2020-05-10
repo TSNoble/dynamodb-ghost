@@ -1,0 +1,7 @@
+include *.py
+include *.md
+include LICENSE
+include *.txt
+recursive-include dynamodb_ghost *.py
+recursive-include test/*
+global-exclude *.py[co]
