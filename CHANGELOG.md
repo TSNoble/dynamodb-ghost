@@ -1,7 +1,9 @@
 0.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+### Added
+
+ - Example usage in README.md
 
 
 0.0.1 (2020-05-10)
