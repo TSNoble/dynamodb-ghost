@@ -86,7 +86,7 @@
   {
     "Enabled": true,
     "SSEType": "KMS",
-    "KMSMasterKeyId": "arn:aws:kms:eu-west-1:017125557732:key/466f6552-d7de-4078-91d4-043919e91d95"
+    "KMSMasterKeyId": "arn:aws:kms:eu-west-1:123:key/466f6552-d7de-4078-91d4-043919e91d95"
   },
   "Tags":
   [
